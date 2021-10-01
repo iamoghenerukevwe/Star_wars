@@ -1,38 +1,275 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flex-all-to-center-in-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.d-none {
+  display: none !important;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-holder {
+  width: 320px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.logo-holder img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.droppy-section {
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dropDown {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
+.dropDown div:first-child p {
+  margin: 0;
+  margin-top: 2%;
+}
+
+.dropDown div:first-child {
+  width: 90%;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  color: yellow;
+  overflow: hidden;
+  vertical-align: middle;
+  text-align: center;
+  height: 45px;
+  cursor: pointer;
+}
+
+.dropDown div:last-child {
+  width: 8%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid yellow;
+  color: yellow;
+  border-radius: 10px;
+  height: 45px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.dropDown div:first-child:hover {
+  background: yellow;
+  color: black;
+}
+
+.dropDown div:last-child:hover {
+  background: yellow;
+  color: black;
+}
+
+@media screen and (min-width: 600px) {
+  .dropDown {
+    width: 50%;
+  }
+
+  .character-list-div table {
+    width: 90%;
+  }
+
+  .character-list-div {
+    margin-left: 1%;
+  }
+  
+}
+
+.dropDown-list {
+  width: 80%;
+  border: 1px solid yellow;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dropDown-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropDown-list ul li {
+  color: yellow;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropDown-list ul li:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.App-droppy {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+}
+
+.movie-card-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movieCard {
+  flex: 1;
+  height: auto;
+  border-radius: 5px;
+}
+
+.titleDiv {
+  width: 100%;
+  align-items: center;
+}
+
+.title {
+  background: yellow;
+  text-align: center;
+  padding: 10px;
+}
+
+/*  animation */
+#scroll-container {
+  height: 200px;
+  overflow: hidden;
+  margin-left: 8%;
+}
+
+#scroll-text {
+  color: yellow;
+  height: 100%;
+  font-size: larger;
+  width: 90%;
+  text-align: center;
+
+  /* animation properties */
+  -moz-transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+
+  -moz-animation: my-animation 20s linear infinite;
+  -webkit-animation: my-animation 20s linear infinite;
+  animation: my-animation 20s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
   from {
-    transform: rotate(0deg);
+    -moz-transform: translateY(100%);
   }
+
   to {
-    transform: rotate(360deg);
+    -moz-transform: translateY(-100%);
   }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from {
+    -webkit-transform: translateY(100%);
+  }
+
+  to {
+    -webkit-transform: translateY(-100%);
+  }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+
+  to {
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+/*  */
+
+.character-list-div {
+  width: 100%;
+  color: yellow;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-left: 20%;
+}
+
+.character-list-div table {
+  text-align: left;
+  width: 60%;
+  border: 2px outset yellow;
+  border-radius: 10px;
+  margin-bottom: 30px;
+
+}
+
+.character-list-div td  {
+  padding-right: 20%;
+}
+
+
+td {
+  border-bottom: 1px solid yellow;
+  border-right: 1px solid yellow;
+  width: 60%;
+}
+
+thead {
+  background-color: yellow;
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+.sum{
+  background-color: yellow;
+  color: black;
+  max-width: 30%;
+  //font-size: small;
+  font-weight: bold;
 }
