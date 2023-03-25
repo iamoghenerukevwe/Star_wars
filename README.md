@@ -7,4 +7,4 @@ This project was  created using the starwars API to fetch the opening crawl and 
 React.js
 
 ## Find Live site at:
-https://maesterr.netlify.app/ [ Maesterr]
+[Maesterr] (https://maesterr.netlify.app/)
